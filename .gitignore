@@ -1,0 +1,24 @@
+#build directory
+build/
+cmake-build-*/
+
+#IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+#compiled files
+*.o
+*.so
+*.a
+
+#generated files
+Calculator
+Calculator
+
+#Data files
+data/history.txt
+
+#OS
+.DS_Store
