@@ -12,7 +12,8 @@ public:
     TaskManager() = default;
 
     void add();
-    bool remove(int id);
+    bool remove(int taskId);
+    void toggleComplete(int taskId);
 
     void displayTasks() const;
 };

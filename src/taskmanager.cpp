@@ -8,10 +8,10 @@ void TaskManager::add(){
     tasks.emplace_back(dsc);
 }
 
-bool TaskManager::remove(int id){
+bool TaskManager::remove(int taskId){
     auto it = std::find_if(tasks.begin(), tasks.end(), 
-                           [id](const Task& task){
-                           return task.getId() == id;
+                           [taskId](const Task& task){
+                           return task.getId() == taskId;
                            });
 
     if (it != tasks.end()) {
@@ -21,8 +21,19 @@ bool TaskManager::remove(int id){
     return false;
 }
 
+void TaskManager::toggleComplete(int taskId){
+    auto it = std::find_if(tasks.begin(), tasks.end(),
+                           [taskId](const Task& task){
+                           return task.getId() == taskId;
+                           });
+
+    if (it != tasks.end()) {
+        it->toggleCompleted();
+    }
+}
+
 void TaskManager::displayTasks() const{
     for (const auto& task : tasks){
-        std::cout << task.getId() << " | " << task.getDescription() << "\n";
+        std::cout<<task.toString()<<"\n";
     }
 }

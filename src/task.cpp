@@ -22,3 +22,24 @@ auto Task::getDescription() const -> std::string{
 void Task::toggleCompleted(){
     isCompleted = !isCompleted;
 }
+
+auto Task::toString() const -> std::string{
+    std::stringstream sstr;
+
+    sstr << "[" << id << "] " << description;
+
+    if (isCompleted) {
+        sstr<<" \t\t[FINISHED]";
+    } else {
+        sstr<<" \t\t[UNFINISHED]";
+    }
+
+    return sstr.str();
+}
+
+auto Task::toFileString() const -> std::string{
+    std::stringstream sstr;
+
+    sstr<<id<<"|"<<description<<"|"<<(isCompleted ? "1" : "0");
+    return sstr.str();
+}

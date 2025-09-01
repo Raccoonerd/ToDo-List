@@ -11,6 +11,8 @@ int main(int argc, char* argv[]){
 
     taskmgr.remove(2);
 
+    taskmgr.toggleComplete(3);
+
     std::cout<<"\n\n";
 
     taskmgr.displayTasks();

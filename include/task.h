@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <sstream>
 
 class Task{
 private:
@@ -16,4 +17,7 @@ public:
     [[nodiscard]] auto getDescription() const -> std::string;
     
     void toggleCompleted();
+
+    [[nodiscard]] auto toString() const -> std::string;
+    [[nodiscard]] auto toFileString() const -> std::string;
 };
