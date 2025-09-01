@@ -2,6 +2,7 @@
 #include "task.h"
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 class TaskManager{
 private:
@@ -11,7 +12,7 @@ public:
     TaskManager() = default;
 
     void add();
-    void remove();
+    bool remove(int id);
 
     void displayTasks() const;
 };

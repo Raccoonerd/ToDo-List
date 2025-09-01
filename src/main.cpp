@@ -5,6 +5,13 @@ int main(int argc, char* argv[]){
     
     taskmgr.add();
     taskmgr.add();
+    taskmgr.add();
+
+    taskmgr.displayTasks();
+
+    taskmgr.remove(2);
+
+    std::cout<<"\n\n";
 
     taskmgr.displayTasks();
 
