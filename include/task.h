@@ -11,6 +11,7 @@ private:
 
 public:
     Task(std::string& desc);
+    Task(int a_id, std::string& a_description, bool a_isCompleted);
     
     [[nodiscard]] auto getId() const -> int;
     [[nodiscard]] auto getIsCompleted() const -> bool;
