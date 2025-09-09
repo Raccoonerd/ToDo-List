@@ -29,6 +29,7 @@ set(SOURCES
     src/main.cpp
     src/task.cpp
     src/taskmanager.cpp
+    src/filehandler.cpp
 )
 
 # Executable
